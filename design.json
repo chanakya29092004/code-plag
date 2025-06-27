@@ -1,0 +1,336 @@
+{
+    "designSystem": {
+      "name": "Credit Card Management Interface",
+      "version": "1.0",
+      "description": "Modern card-based layout for financial management features"
+    },
+    "colorPalette": {
+      "primary": {
+        "purple": "#6B46C1",
+        "purpleLight": "#E0E7FF",
+        "purpleDark": "#4C1D95"
+      },
+      "secondary": {
+        "pink": "#F8BBD9",
+        "pinkLight": "#FDF2F8",
+        "coral": "#FF6B6B",
+        "orange": "#FF8A65",
+        "orangeLight": "#FFF3E0"
+      },
+      "accent": {
+        "yellow": "#FFC107",
+        "yellowLight": "#FFFBF0",
+        "green": "#8BC34A",
+        "greenLight": "#F1F8E9",
+        "blue": "#42A5F5",
+        "blueLight": "#E3F2FD"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "lightGray": "#F5F5F5",
+        "mediumGray": "#9E9E9E",
+        "darkGray": "#424242",
+        "black": "#000000"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "primary": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        "fallback": "system-ui, sans-serif"
+      },
+      "fontSizes": {
+        "cardTitle": "24px",
+        "cardSubtitle": "14px",
+        "bodyText": "13px",
+        "caption": "12px"
+      },
+      "fontWeights": {
+        "bold": 700,
+        "semibold": 600,
+        "medium": 500,
+        "regular": 400
+      },
+      "lineHeight": {
+        "tight": 1.2,
+        "normal": 1.4,
+        "relaxed": 1.6
+      }
+    },
+    "layout": {
+      "grid": {
+        "columns": 2,
+        "rows": 3,
+        "gap": "16px",
+        "containerPadding": "20px"
+      },
+      "cardSizes": {
+        "small": {
+          "width": "300px",
+          "height": "200px"
+        },
+        "medium": {
+          "width": "350px",
+          "height": "250px"
+        },
+        "large": {
+          "width": "400px",
+          "height": "300px"
+        }
+      }
+    },
+    "components": {
+      "card": {
+        "borderRadius": "16px",
+        "padding": "24px",
+        "boxShadow": "0 4px 12px rgba(0, 0, 0, 0.1)",
+        "border": "none",
+        "transition": "transform 0.2s ease, box-shadow 0.2s ease"
+      },
+      "illustrations": {
+        "style": "flat",
+        "strokeWidth": "2px",
+        "iconSize": {
+          "small": "24px",
+          "medium": "32px",
+          "large": "48px"
+        }
+      }
+    },
+    "cardDefinitions": [
+      {
+        "id": "maximize-rewards",
+        "title": "Maximize Card Rewards",
+        "description": "Maximize rewards on every purchase. Identify top cards for each spend.",
+        "backgroundColor": "#E0E7FF",
+        "textColor": "#000000",
+        "illustration": {
+          "type": "credit-card-with-person",
+          "elements": [
+            {
+              "type": "credit-card",
+              "color": "#6B46C1",
+              "position": "center-left",
+              "features": ["chip", "dollar-signs"]
+            },
+            {
+              "type": "person",
+              "color": "#FF6B6B",
+              "position": "right",
+              "pose": "standing-casual",
+              "clothing": "business-casual"
+            },
+            {
+              "type": "background-shapes",
+              "elements": ["geometric-lines", "dollar-symbols"],
+              "opacity": 0.1
+            }
+          ]
+        },
+        "layout": {
+          "titlePosition": "top-left",
+          "illustrationPosition": "bottom-right",
+          "descriptionPosition": "bottom-left"
+        }
+      },
+      {
+        "id": "manage-cards",
+        "title": "Manage Cards",
+        "description": "Manage multiple cards, track benefits, & set payment reminders.",
+        "backgroundColor": "#F8BBD9",
+        "textColor": "#000000",
+        "illustration": {
+          "type": "hand-with-cards",
+          "elements": [
+            {
+              "type": "hand",
+              "color": "#FFFFFF",
+              "position": "center-right"
+            },
+            {
+              "type": "credit-cards",
+              "colors": ["#FF6B6B", "#6B46C1", "#42A5F5"],
+              "count": 3,
+              "arrangement": "fanned-out"
+            }
+          ]
+        },
+        "layout": {
+          "titlePosition": "top-left",
+          "illustrationPosition": "center-right",
+          "descriptionPosition": "center-left"
+        }
+      },
+      {
+        "id": "set-goals",
+        "title": "Set Goals",
+        "description": "Set trip goals or target annual fee waivers.",
+        "backgroundColor": "#FFFBF0",
+        "textColor": "#000000",
+        "illustration": {
+          "type": "target-with-arrow",
+          "elements": [
+            {
+              "type": "target",
+              "color": "#FFC107",
+              "rings": 3,
+              "position": "bottom-right"
+            },
+            {
+              "type": "arrow",
+              "color": "#FF6B6B",
+              "position": "center-target"
+            }
+          ]
+        },
+        "layout": {
+          "titlePosition": "top-left",
+          "illustrationPosition": "bottom-right",
+          "descriptionPosition": "center-left"
+        }
+      },
+      {
+        "id": "lounges",
+        "title": "Lounges",
+        "description": "Track & find eligible airport & railway lounge access.",
+        "backgroundColor": "#F1F8E9",
+        "textColor": "#000000",
+        "illustration": {
+          "type": "lounge-passes",
+          "elements": [
+            {
+              "type": "passes",
+              "color": "#8BC34A",
+              "count": 2,
+              "features": ["plane-icon", "train-icon"],
+              "arrangement": "stacked"
+            }
+          ]
+        },
+        "layout": {
+          "titlePosition": "bottom-left",
+          "illustrationPosition": "top-right",
+          "descriptionPosition": "bottom-left"
+        }
+      },
+      {
+        "id": "credit-strategy",
+        "title": "Credit Card Strategy",
+        "description": "Personalized credit card plan that fits your lifestyle.",
+        "backgroundColor": "#FFF3E0",
+        "textColor": "#000000",
+        "illustration": {
+          "type": "business-planning",
+          "elements": [
+            {
+              "type": "person-male",
+              "color": "#FF6B6B",
+              "position": "left",
+              "pose": "presenting"
+            },
+            {
+              "type": "person-female",
+              "color": "#6B46C1",
+              "position": "right",
+              "pose": "analyzing"
+            },
+            {
+              "type": "chart-board",
+              "color": "#FF8A65",
+              "position": "center",
+              "elements": ["bar-chart", "pie-chart", "trend-lines"]
+            },
+            {
+              "type": "background-circle",
+              "color": "#FF8A65",
+              "opacity": 0.2,
+              "size": "large"
+            }
+          ]
+        },
+        "layout": {
+          "titlePosition": "bottom-left",
+          "illustrationPosition": "center",
+          "descriptionPosition": "bottom-left"
+        }
+      },
+      {
+        "id": "find-compare-apply",
+        "title": "Find, Compare & Apply",
+        "description": "Discover ideal cards. Compare features and apply in minutes.",
+        "backgroundColor": "#E3F2FD",
+        "textColor": "#000000",
+        "illustration": {
+          "type": "application-interface",
+          "elements": [
+            {
+              "type": "browser-window",
+              "color": "#42A5F5",
+              "position": "bottom-right",
+              "content": "SBI Cashback C..."
+            },
+            {
+              "type": "cursor-pointer",
+              "color": "#6B46C1",
+              "position": "on-browser"
+            },
+            {
+              "type": "comparison-chart",
+              "color": "#42A5F5",
+              "position": "top-right",
+              "bars": 3
+            }
+          ]
+        },
+        "layout": {
+          "titlePosition": "top-left",
+          "illustrationPosition": "bottom-right",
+          "descriptionPosition": "center-left"
+        }
+      }
+    ],
+    "interactions": {
+      "cardHover": {
+        "transform": "translateY(-4px)",
+        "boxShadow": "0 8px 24px rgba(0, 0, 0, 0.15)",
+        "transition": "all 0.2s ease"
+      },
+      "cardClick": {
+        "transform": "scale(0.98)",
+        "transition": "transform 0.1s ease"
+      }
+    },
+    "responsiveBreakpoints": {
+      "mobile": "480px",
+      "tablet": "768px",
+      "desktop": "1024px",
+      "large": "1440px"
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "xxl": "48px"
+    },
+    "designPrinciples": {
+      "illustrations": {
+        "style": "Modern flat design with subtle depth",
+        "colorUsage": "Limited palette with strategic accent colors",
+        "composition": "Balanced asymmetrical layouts",
+        "consistency": "Consistent stroke weights and corner radii"
+      },
+      "layout": {
+        "hierarchy": "Clear visual hierarchy with title prominence",
+        "whitespace": "Generous padding and breathing room",
+        "alignment": "Left-aligned text with right-aligned illustrations",
+        "balance": "Visual weight distributed across card area"
+      },
+      "accessibility": {
+        "contrast": "WCAG AA compliant color contrasts",
+        "typography": "Readable font sizes and line heights",
+        "touch": "Minimum 44px touch targets",
+        "motion": "Respectful of reduced motion preferences"
+      }
+    }
+  }
